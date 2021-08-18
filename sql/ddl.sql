@@ -1,0 +1,6 @@
+DROP TABLE IF EXISTS member;
+CREATE TABLE member(
+id VARCHAR(30),
+name VARCHAR(30),
+password VARCHAR(255)
+);

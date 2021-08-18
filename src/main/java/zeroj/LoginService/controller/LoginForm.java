@@ -1,28 +1,15 @@
-package zeroj.LoginService.domain;
+package zeroj.LoginService.controller;
 
-import javax.persistence.Entity;
-
-@Entity
-public class Member {
-
-    private String name;
+public class LoginForm {
     private String Id;
     private String password;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getId() {
         return Id;
     }
 
     public void setId(String id) {
-        this.Id = id;
+        Id = id;
     }
 
     public String getPassword() {
