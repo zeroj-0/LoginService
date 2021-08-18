@@ -3,14 +3,16 @@
 <body>
 <div class="container">
     <div>
-        <form action="/members/login" method="post">
+        <form action="/members/login">
         <h1>로그인이 완료되었습니다.</h1>
         <p>
             <label>이름 : </label>
+            <td th:text = "${member.name}"></td>
 
         </p>
         <p>
             <label>아이디 : </label>
+            <td th:text = "${member.Id}"></td>
         </p>
         </form>
     </div>

@@ -34,20 +34,6 @@ public class MemberController {
         return "redirect:/";
     }
 
-//    @GetMapping("/members/login")
-//    public String loginService(){
-//        return "members/loginComplete";
-//    }
-
-    @PostMapping("/members/login")
-    public String login(LoginForm loginForm){
-        Member member = new Member();
-        boolean loginId = loginForm.getId().equals(member.getId());
-        boolean loginPassword = loginForm.getPassword().equals(member.getPassword());
-
-
-        return "members/loginComplete";
-    }
 
     @GetMapping("/members/retouch")
     public String retouchMember(){

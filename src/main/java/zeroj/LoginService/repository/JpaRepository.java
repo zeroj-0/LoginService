@@ -1,6 +1,5 @@
 package zeroj.LoginService.repository;
 
-import org.springframework.stereotype.Repository;
 import zeroj.LoginService.domain.Member;
 
 import javax.persistence.EntityManager;
@@ -11,6 +10,7 @@ import java.util.Optional;
 public class JpaRepository implements MemberRepository{
 
     private final EntityManager em;
+
     public JpaRepository(EntityManager em){
         this.em = em;
     }
@@ -23,8 +23,10 @@ public class JpaRepository implements MemberRepository{
 
     @Override
     public Optional<Member> findById(String Id) {
-        Member member = em.find(Member.class, Id);
-        return Optional.ofNullable(member);
+        List<Member> Idresult = em.createQuery("select m from Member m where m.Id = :Id", Member.class)
+                .setParameter("Id", Id)
+                .getResultList();
+        return Idresult.stream().findAny();
     }
 
     @Override
