@@ -1,6 +1,7 @@
-DROP TABLE IF EXISTS member;
-CREATE TABLE member(
-id VARCHAR(30),
-name VARCHAR(30),
-password VARCHAR(255)
+drop table if exists member;
+create table member
+(
+    id   varchar(255),
+    name varchar(255),
+    password varchar(255)
 );

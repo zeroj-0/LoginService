@@ -2,12 +2,12 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <body>
 <div class="container">
-    <div class="form-group">
     <form action="/members/new" method="post">
+    <div class="form-group">
         <h1>회원 가입</h1>
         <p>
-            <label for="ID">ID</label>
-            <input type="text" id="ID" name="ID">
+            <label for="Id">ID</label>
+            <input type="text" id="Id" name="Id">
         </p>
         <p>
             <label for="password">Password</label>
@@ -17,9 +17,9 @@
             <label for="name">회원 이름</label>
             <input type="text" id="name" name="name">
         </p>
-        <button onclick="location.href='redirect:/'">저장</button>
-    </form>
     </div>
+        <button type="submit">저장</button>
+    </form>
 </div> <!-- /container -->
 </body>
 </html>
