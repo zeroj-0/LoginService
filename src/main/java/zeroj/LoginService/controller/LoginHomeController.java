@@ -17,14 +17,16 @@ public class LoginHomeController {
     @PostMapping("/")
     public String login(LoginForm loginForm){
         Member member = new Member();
-        boolean loginId = loginForm.getId().equals(member.getId());
-        boolean loginPassword = loginForm.getPassword().equals(member.getPassword());
 
-        if (loginId == true && loginPassword == true) {
+        if (isExist(member,loginForm)) {
             return "members/loginComplete";
         }
-        else {
-            return "redirect:/";
-        }
+        return "redirect:/";
+    }
+
+    private boolean isExist(Member member, LoginForm loginForm) {
+        boolean isLoginId = loginForm.getId().equals(member.getId());
+        boolean isLoginPassword = loginForm.getPassword().equals(member.getPassword());
+        return isLoginId && isLoginPassword;
     }
 }

@@ -1,17 +1,15 @@
 package zeroj.LoginService.domain;
 
-import jdk.jfr.Name;
-import org.springframework.data.annotation.Id;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "member")
 public class Member {
 
+    @Id
     @Column(name = "id")
     private String Id;
     @Column(name = "name")
