@@ -20,8 +20,11 @@ public class LoginHomeController {
         boolean loginId = loginForm.getId().equals(member.getId());
         boolean loginPassword = loginForm.getPassword().equals(member.getPassword());
 
-        if (loginId == true && loginPassword == true)
+        if (loginId == true && loginPassword == true) {
             return "members/loginComplete";
-        else return "redirect:/";
+        }
+        else {
+            return "redirect:/";
+        }
     }
 }

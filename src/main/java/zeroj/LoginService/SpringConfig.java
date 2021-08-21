@@ -11,10 +11,18 @@ import zeroj.LoginService.service.MemberService;
 import javax.persistence.EntityManager;
 import javax.sql.DataSource;
 
+
 @Configuration
 public class SpringConfig {
 
     private EntityManager em;
+//    private MemberRepository memberRepository;
+
+//    @Autowired
+//    public SpringConfig(MemberRepository memberRepository) {
+//        this.memberRepository = memberRepository;
+//    }
+
 
     @Autowired
     public SpringConfig(EntityManager em) {

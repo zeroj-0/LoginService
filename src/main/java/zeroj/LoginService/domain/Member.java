@@ -1,16 +1,18 @@
 package zeroj.LoginService.domain;
 
+import jdk.jfr.Name;
+import org.springframework.data.annotation.Id;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 
-@Entity
+//@Entity
 public class Member {
 
-    @Column(name = "name")
-    private String name;
-    @Column(name = "id")
+//    @Column
     private String Id;
-    @Column(name = "password")
+    private String name;
     private String password;
 
     public String getName() {
