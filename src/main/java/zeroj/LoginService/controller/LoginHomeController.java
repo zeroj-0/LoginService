@@ -4,7 +4,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import zeroj.LoginService.domain.Member;
-import zeroj.LoginService.repository.JpaRepository;
 
 @Controller
 public class LoginHomeController {
